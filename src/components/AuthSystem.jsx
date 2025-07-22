@@ -15,6 +15,13 @@ const AuthSystem = ({ onLogin }) => {
     e.preventDefault();
     setLoading(true);
     setErrors({});
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(formData.email)) {
+      setErrors({ email: "Enter a valid email address" });
+      setLoading(false);
+      return;
+    }
 
     // Basic validation
     if (!formData.email || !formData.password) {
@@ -123,6 +130,7 @@ const AuthSystem = ({ onLogin }) => {
                 onChange={handleInputChange}
                 className="w-full bg-white/10 border border-white/20 rounded-lg pl-12 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-blue-300 text-white"
                 placeholder="Enter your email"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                 required
               />
             </div>
@@ -161,6 +169,12 @@ const AuthSystem = ({ onLogin }) => {
                   required
                 />
               </div>
+            </div>
+          )}
+
+          {errors.email && (
+            <div className="mt-2 bg-red-500/20 border border-red-400/30 rounded-lg p-2 text-red-200 text-sm">
+              {errors.email}
             </div>
           )}
 

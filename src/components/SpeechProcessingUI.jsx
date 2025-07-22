@@ -101,7 +101,6 @@ const SpeechProcessingUI = ({ currentUser, onLogout }) => {
 
     wsRef.current.on("transcription", (data) => {
       setLiveTranscription(data.text);
-      setIsProcessing(true);
     });
 
     wsRef.current.on("ai_response", (data) => {
@@ -528,7 +527,7 @@ const SpeechProcessingUI = ({ currentUser, onLogout }) => {
 
                 {/* Instruction */}
                 <div className="bg-blue-500/20 border border-blue-500/30 rounded-xl p-4 w-full">
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-center gap-4">
                     <Info className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-blue-300 font-medium mb-1">
@@ -740,6 +739,7 @@ const SpeechProcessingUI = ({ currentUser, onLogout }) => {
                     <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-purple-400 rounded-full animate-bounce delay-300" />
                     <div className="absolute top-2 -left-2 w-2 h-2 bg-blue-400 rounded-full animate-bounce delay-500" />
                   </div>
+                  AI is thinking, please wait...
                 </div>
               </div>
             )}

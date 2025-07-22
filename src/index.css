@@ -12,3 +12,6 @@ body {
   background: linear-gradient(to bottom right, #581c87, #1e3a8a, #3730a3);
   min-height: 100vh;
 }
+button {
+  cursor: pointer;
+}
