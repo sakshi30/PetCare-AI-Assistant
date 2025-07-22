@@ -38,16 +38,19 @@ const AuthSystem = ({ onLogin }) => {
     try {
       // Replace this with your actual API calls
       const endpoint = isLogin ? "/api/auth/login" : "/api/auth/register";
-      const response = await fetch(`http://localhost:9000${endpoint}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: formData.email,
-          password: formData.password,
-        }),
-      });
+      const response = await fetch(
+        `https://web-production-2282d.up.railway.app${endpoint}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: formData.email,
+            password: formData.password,
+          }),
+        }
+      );
 
       const data = await response.json();
       if (response.ok) {

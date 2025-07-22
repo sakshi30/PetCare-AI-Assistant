@@ -93,7 +93,7 @@ const SpeechProcessingUI = ({ currentUser, onLogout }) => {
     // }, 1000);
 
     // In your actual implementation, use:
-    wsRef.current = io("http://localhost:9000");
+    wsRef.current = io("https://web-production-2282d.up.railway.app");
 
     wsRef.current.on("connect", () => {
       setWsStatus("connected");
