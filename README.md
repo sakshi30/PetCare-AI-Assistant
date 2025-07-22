@@ -27,3 +27,45 @@ Clean, responsive design for all devices
 ## 6. Instant Response
 
 Fast AI-powered responses to your queries
+
+# 🚀 Live Demo
+
+Frontend: https://pet-care-ai-assistant-5a3yldcj8.vercel.app/login
+Backend API: `https://web-production-2282d.up.railway.app
+
+# 🛠️ Tech Stack
+
+## Frontend:
+
+React 18
+JavaScript/TypeScript
+CSS3/Styled Components
+Socket.IO Client
+Axios for API calls
+
+## Backend:
+
+Python 3.x
+Flask/FastAPI
+Socket.IO for real-time communication
+AI/ML integration
+
+# 📋 Prerequisites
+
+Before running this project, make sure you have:
+
+Node.js (v16 or higher)
+npm or yarn
+Git
+
+# 🤝 Contributing
+
+Fork the project
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+
+# 🏆 Hackathon Project
+
+This project was developed for [Hackathon Name] with the goal of improving pet care accessibility through AI technology.
